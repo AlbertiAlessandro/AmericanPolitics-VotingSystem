@@ -8,6 +8,7 @@
     <title>Elections</title>
 </head>
 <body>
+    <h1>Elections</h1>
 
 </body>
 </html>
