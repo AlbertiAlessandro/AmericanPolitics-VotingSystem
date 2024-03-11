@@ -17,64 +17,8 @@
         }
 
 
-        .container{
-            width: 100%;
-            height: 100vh;
-            background-position: center;
-            background-size: cover;
-            padding-left: 8%;
-            padding-right: 8%;
-            box-sizing: border-box;
-            animation: change 50s ease-in-out infinite;
-        }
 
-        @keyframes change {
-            0% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img1.jpg");
 
-            }
-
-            10% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img2.jpg");
-            }
-
-            20% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img3.jpg");
-            }
-
-            30% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img4.jpg");
-            }
-
-            40% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img5.jpg");
-
-            }
-
-            50% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img6.jpg");
-            }
-
-            60% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img7.jpg");
-            }
-
-            70% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img8.jpg");
-            }
-
-            80% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img9.jpg");
-            }
-
-            90% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img10.jpg");
-            }
-
-            100% {
-                background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("templates/img/img11.jpg");
-            }
-        }
 
 
         /* Centra l'h1 orizzontalmente e verticalmente */
@@ -85,12 +29,60 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-image: url("img/img1.jpg"), url("img/img2.jpg"), url("img/img3.jpg");
             background-size: cover; /* Ensure images cover the entire area */
             background-position: center center;
             background-repeat: no-repeat;
-            animation: slideshow 5s linear infinite; /* Try a shorter duration for testing */
+            animation: change 50s ease-in-out infinite; /* Try a shorter duration for testing */
         }
+
+        @keyframes change {
+            0% {
+                background-image: url("templates/img/img1.jpg");
+
+            }
+
+            10% {
+                background-image: url("templates/img/img2.jpg");
+            }
+
+            20% {
+                background-image: url("templates/img/img3.jpg");
+            }
+
+            30% {
+                background-image: url("templates/img/img4.jpg");
+            }
+
+            40% {
+                background-image: url("templates/img/img5.jpg");
+
+            }
+
+            50% {
+                background-image: url("templates/img/img6.jpg");
+            }
+
+            60% {
+                background-image: url("templates/img/img7.jpg");
+            }
+
+            70% {
+                background-image: url("templates/img/img8.jpg");
+            }
+
+            80% {
+                background-image: url("templates/img/img9.jpg");
+            }
+
+            90% {
+                background-image: url("templates/img/img10.jpg");
+            }
+
+            100% {
+                background-image: url("templates/img/img11.jpg");
+            }
+        }
+
 
 
 
@@ -99,7 +91,7 @@
         /* Modifica lo stile dei bottoni */
         .button button {
             padding: 15px 30px;
-            border: 2px solid black; /* Verde lime */
+            border: 2px solid black;
             border-radius: 10px;
             cursor: pointer;
             background-color: #fff; /* Bianco */
@@ -138,7 +130,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
+
 <div class="total">
     <h1>American Politics & Voting System</h1>
     <div class="button-container">
@@ -160,7 +152,7 @@
 
     </div>
 </div>
-</div>
+
 </body>
 
 
