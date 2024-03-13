@@ -9,8 +9,8 @@
     <style>
         /* Imposta il font e la dimensione dell'h1 */
         h1 {
-            font-family: Arial, sans-serif;
-            font-size: 2em;
+            font-family: Impact, sans-serif;
+            font-size: 6em;
             font-weight: bold;
             margin: 0; /* Rimuovi il margine predefinito */
             color: white;
@@ -18,10 +18,6 @@
 
 
 
-
-
-
-        /* Centra l'h1 orizzontalmente e verticalmente */
         .total {
             text-align: center;
             display: flex;
@@ -29,10 +25,10 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-size: cover; /* Ensure images cover the entire area */
+            background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            animation: change 50s ease-in-out infinite; /* Try a shorter duration for testing */
+            animation: change 50s ease-in-out infinite;
         }
 
         @keyframes change {
@@ -135,7 +131,7 @@
     <h1>American Politics & Voting System</h1>
     <div class="button-container">
         <div class="button hover" >
-            <a href='UnitedStatesOfAmerica.php'><button>United State of America</button></a>
+            <a href='UnitedStatesOfAmerica.php'><button>United States of America</button></a>
         </div>
         <div class="button hover">
             <a href='ActualPresident.php'><button>Actual President</button></a>

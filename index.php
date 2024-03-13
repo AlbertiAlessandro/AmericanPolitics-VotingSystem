@@ -8,6 +8,6 @@ $template = new \League\Plates\Engine('templates', 'tpl');
 
 
 
-echo $template->render('america', [
+echo $template->render('index', [
 
 ]);
