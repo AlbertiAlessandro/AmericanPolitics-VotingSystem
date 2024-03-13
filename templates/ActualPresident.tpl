@@ -85,10 +85,19 @@
             width: 80%; /* Larghezza massima del contenitore dei bottoni */
             margin: 0 auto; /* Centra il contenitore dei bottoni */
         }
+
+        .usa-flag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px; /* Adjust the size as needed */
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
+<img class="usa-flag" src="templates/img_PresidentPage/usaBandiera.png" alt="USA Flag">
 <div class="container">
     <img class="president-image" src="templates/img_PresidentPage/joeBiden.webp" alt="Joe Biden">
     <div class="president-info">
