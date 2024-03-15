@@ -28,7 +28,7 @@
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            animation: change 50s ease-in-out infinite;
+            animation: change 50s linear infinite;
         }
 
         @keyframes change {
@@ -134,7 +134,7 @@
             <a href='UnitedStatesOfAmerica.php'><button>United States of America</button></a>
         </div>
         <div class="button hover">
-            <a href='ActualPresident.php'><button>Actual President</button></a>
+            <a href='CurrentPresident.php'><button>Actual President</button></a>
         </div>
         <div class="button hover">
             <a href='Elections.php'><button>Elections</button></a>

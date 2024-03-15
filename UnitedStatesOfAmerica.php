@@ -2,12 +2,12 @@
 
 require 'vendor/autoload.php';
 
-$template = new \League\Plates\Engine('templates', 'tpl');
+$template = new \League\Plates\Engine('templates', 'html');
 
 
 
 
 
-echo $template->render('UnitedStatesOfAmerica', [
+echo $template->render('mappa/UnitedStatesOfAmerica', [
 
 ]);
