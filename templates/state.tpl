@@ -49,7 +49,7 @@
     <img src="http://flags.ox3.in/svg/us/<?=$id?>.svg" alt="Bandiera <?=$name?>">
 
     <div>
-        <h2>Capital</h2>
+        <h2>Capital </h2>
         <h2>Population</h2>
         <h2>Density</h2>
     </div>
