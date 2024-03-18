@@ -49,9 +49,10 @@
     <img src="http://flags.ox3.in/svg/us/<?=$id?>.svg" alt="Bandiera <?=$name?>">
 
     <div>
-        <h2>Capital </h2>
-        <h2>Population</h2>
-        <h2>Density</h2>
+        <h2>Capital : <?=$state_information['capital']?></h2>
+        <h2>Largest City : <?=$state_information['largest_city']?></h2>
+        <h2>Area : <?=$state_information['area_sq_miles']?> miles^2</h2>
+        <h2>Population : <?=$state_information['population']?></h2>
     </div>
 </body>
 </html>
