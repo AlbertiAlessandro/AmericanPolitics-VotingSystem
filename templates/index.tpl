@@ -134,7 +134,7 @@
             <a href='UnitedStatesOfAmerica.php'><button>United States of America</button></a>
         </div>
         <div class="button hover">
-            <a href='CurrentPresident.php'><button>Actual President</button></a>
+            <a href='ActualPresident.php'><button>Actual President</button></a>
         </div>
         <div class="button hover">
             <a href='Elections.php'><button>Elections</button></a>

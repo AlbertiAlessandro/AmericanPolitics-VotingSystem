@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=$name?></title>
+
     <style>
-        body {
+    /* Modifica lo stile dei bottoni */
+    .button button {
+    padding: 15px 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff; /* Bianco */
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin: 5px; /* Spaziatura tra i bottoni */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    }
+
+    /* Effetto hover per i bottoni */
+    .button button:hover {
+    background-color: lightcoral; /* Verde lime */
+    color: #fff; /* Bianco */
+    }
+
+    /* Posiziona i bottoni sopra e sotto l'h1 */
+    .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%; /* Larghezza massima del contenitore dei bottoni */
+    margin: 0 auto; /* Centra il contenitore dei bottoni */
+    }        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -54,5 +83,11 @@
         <h2>Area : <?=$state_information['area_sq_miles']?> miles^2</h2>
         <h2>Population : <?=$state_information['population']?></h2>
     </div>
+     <div class="button-container">
+        <div class="button hover" >
+            <a href='UnitedStatesOfAmerica.php'><button>Return at the Map</button></a>
+        </div>
+    </div>
+</div>
 </body>
 </html>
