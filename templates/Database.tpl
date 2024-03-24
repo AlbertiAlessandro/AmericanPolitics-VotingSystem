@@ -73,16 +73,12 @@
         .query {
             background-color: #f9f9f9; /* Colore di sfondo diverso */
             padding: 20px;
-            margin-top: 20px; /* Aggiunge spazio sopra il div */
+            margin-bottom: 20px; /* Aggiunge spazio sotto il div */
         }
 
-        .query textarea {
-            width: 100%;
-            height: 100px; /* Altezza della textarea */
-            resize: vertical; /* Permette il ridimensionamento verticale */
-            padding: 10px;
-            font-size: 14px;
-            margin-bottom: 10px; /* Aggiunge spazio sotto la textarea */
+        .keyword {
+            font-weight: bold;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -93,30 +89,23 @@
     <img class="usa-flag" src="templates/img_PresidentPage/usaBandiera.png" alt="USA Flag">
     <!-- Div per la query SQL -->
     <div class="query">
-        <h2>Inserisci la tua query SQL:</h2>
-        <textarea id="sql-query" placeholder="Inserisci qui la tua query SQL"></textarea>
-        <div class="filters">
-            <label for="category">Categoria:</label>
-            <select name="category" id="category">
-                <option value="">Tutte</option>
-                <option value="1">Categoria 1</option>
-                <option value="2">Categoria 2</option>
-                <option value="3">Categoria 3</option>
+        <h2>Select the fields for your SQL query</h2>
+        <h4>Winner of elections in a specific year</h4>
+        <div class="query-content">
+            <span class="keyword">YEAR</span>
+            <select name="selectOptions" id="selectOptions">
+                <?php for ($i = 1976; $i <= 2020; $i += 4): ?>
+                <option value="<?= $year ?>"><?=$i?></option>
+                <?php endfor; ?>
             </select>
 
-            <label for="status">Stato:</label>
-            <select name="status" id="status">
-                <option value="">Tutti</option>
-                <option value="pending">In sospeso</option>
-                <option value="completed">Completati</option>
-                <option value="cancelled">Annullati</option>
-            </select>
+
+
         </div>
         <div class="button-container">
-            <button type="submit">Esegui Query</button>
+            <button onclick="componiQuery()">Componi Query</button>
         </div>
     </div>
-
 
     <table id="data-table">
         <thead>
@@ -135,14 +124,38 @@
         </tbody>
     </table>
 
-
-
     <div class="button-container">
         <div class="button hover" >
             <a href='index.php'><button>Home</button></a>
         </div>
     </div>
 </div>
+
+<script>
+    function componiQuery() {
+        var selectOption = document.getElementById("selectOptions").value;
+        var fromOption = document.getElementById("fromOptions").value;
+        var categoria = document.getElementById("category").value;
+        var stato = document.getElementById("status").value;
+
+        var query = "SELECT " + selectOption + " FROM " + fromOption;
+
+        if (categoria !== "") {
+            query += " WHERE categoria = '" + categoria + "'";
+        }
+
+        if (stato !== "") {
+            if (categoria === "") {
+                query += " WHERE stato = '" + stato + "'";
+            } else {
+                query += " AND stato = '" + stato + "'";
+            }
+        }
+
+        console.log("Query:", query);
+    // Esegui qui la logica per eseguire la query
+    }
+</script>
 
 </body>
 </html>
