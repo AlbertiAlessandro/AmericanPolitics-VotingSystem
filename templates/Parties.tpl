@@ -117,6 +117,27 @@
             height: auto;
         }
 
+        figcaption.slide-text {
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .logo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .logo-list li {
+            margin-bottom: 10px;
+        }
+
+        .logo-list img {
+            max-width: 100px;
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -129,22 +150,24 @@
         <div style="width: 60%;">
             <h2>Democratic Party</h2>
             <h3>Overview</h3>
-            <p>The Democratic Party is one of the two major political parties in the United States...</p>
-
+            <p>The Democratic Party is one of the two major political parties in the United States, and it was founded in 1828.</p>
             <h3>Ideology</h3>
-            <p>The Democratic Party generally advocates for progressive policies...</p>
-
+            <p>The Democratic Party generally advocates for progressive policies that include:</p>
+            <ol>
+                <li><strong>Social justice</strong></li>
+                <li><strong>Gun control</strong></li>
+                <li><strong>Environmental justice</strong></li>
+                <li><strong>Healthcare for all</strong></li>
+                <li><strong>Reduce economic inequality</strong></li>
+                <li><strong>Provide more social services</strong></li>
+                <li><strong>Women’s reproductive rights</strong></li>
+            </ol>
             <h3>Major Figures</h3>
             <ul>
-                <li>Prominent leaders affiliated with the Democratic Party include Franklin D. Roosevelt, John F. Kennedy, Bill Clinton, and Barack Obama.</li>
+                <li>Prominent leaders affiliated with the Democratic Party include Franklin D. Roosevelt, John F. Kennedy, Bill Clinton, Jimmy Carter and Barack Obama.</li>
                 <li>Current key figures include Joe Biden, Kamala Harris, and prominent senators and congresspersons.</li>
             </ul>
 
-            <h3>Recent Platform</h3>
-            <ul>
-                <li>Focus on healthcare reform, climate change mitigation, income inequality, immigration reform, and social justice issues.</li>
-                <li>Advocacy for progressive taxation, affordable education, and expansion of social welfare programs.</li>
-            </ul>
         </div>
 
         <!-- Slideshow a destra -->
@@ -152,32 +175,32 @@
             <!-- Slide 1 -->
             <div class="mySlides1">
                 <img src="templates/img_Parties/democratic/1.jpg" class="slide-img">
-                <div class="slide-text">Franklin D. Roosevelt</div>
+                <figcaption class="slide-text">Franklin D. Roosevelt</figcaption>
             </div>
 
             <!-- Slide 2 -->
             <div class="mySlides1">
                 <img src="templates/img_Parties/democratic/2.jpeg" class="slide-img">
-                <div class="slide-text">John F Kennedy</div>
+                <figcaption class="slide-text">John F Kennedy</figcaption>
             </div>
 
             <!-- Slide 3 -->
             <div class="mySlides1">
                 <img src="templates/img_Parties/democratic/3.jpeg" class="slide-img">
-                <div class="slide-text">Jimmy Carter</div>
+                <figcaption class="slide-text">Jimmy Carter</figcaption>
             </div>
 
             <!-- Slide 4 -->
             <div class="mySlides1">
                 <img src="templates/img_Parties/democratic/4.jpg" class="slide-img">
-                <div class="slide-text">Bill Clinton</div>
+                <figcaption class="slide-text">Bill Clinton</figcaption>
             </div>
 
 
             <!-- Slide 5 -->
             <div class="mySlides1">
                 <img src="templates/img_Parties/democratic/5.jpg" class="slide-img">
-                <div class="slide-text">Barack Obama</div>
+                <figcaption class="slide-text">Barack Obama</figcaption>
             </div>
 
 
@@ -195,48 +218,51 @@
         <div style="width: 60%;">
         <h2>Republican Party</h2>
         <h3>Overview</h3>
-        <p>The Republican Party is the other major political party in the United States...</p>
+        <p>The Republican Party is the other major political party in the United States. It was founded 1854, and it is also called the GOP, the Grand Old Party.</p>
 
         <h3>Ideology</h3>
         <p>The Republican Party generally supports conservative policies...</p>
+            <ol>
+                <li><strong>increased military spending</strong></li>
+                <li><strong>anti-immigration</strong></li>
+                <li><strong>individualism</strong></li>
+                <li><strong>less gov’t intervention</strong></li>
+                <li><strong>traditional “family” values</strong></li>
+                <li><strong>State’s rights</strong></li>
+            </ol>
 
         <h3>Major Figures</h3>
         <ul>
-            <li>Prominent leaders affiliated with the Republican Party include Abraham Lincoln, Ronald Reagan, George H.W. Bush, and George W. Bush.</li>
+            <li>Prominent leaders affiliated with the Republican Party include Abraham Lincoln, Richard Nixon, Ronald Reagan, and George W. Bush.</li>
             <li>Current key figures include Donald Trump, Mitch McConnell, and prominent senators and congresspersons.</li>
         </ul>
 
-        <h3>Recent Platform</h3>
-        <ul>
-            <li>Emphasis on tax cuts, deregulation, strong national security measures, opposition to abortion, and support for Second Amendment rights.</li>
-            <li>Focus on border security, immigration restriction, and conservative judicial appointments.</li>
-        </ul>
         </div>
 
         <!-- Slideshow a destra -->
         <div class="slideshow-container">
             <!-- Slide 1 -->
             <div class="mySlides2">
-                <img src="templates/img_Parties/republican/1.jpg" class="slide-img">
-                <div class="slide-text">Richard Nixon</div>
+                <img src="templates/img_Parties/republican/1.jpeg" class="slide-img">
+                <figcaption class="slide-text">Richard Nixon</figcaption>
             </div>
 
             <!-- Slide 2 -->
             <div class="mySlides2">
                 <img src="templates/img_Parties/republican/2.jpg" class="slide-img">
-                <div class="slide-text">Ronald Reagan</div>
+                <figcaption class="slide-text">Ronald Reagan</figcaption>
             </div>
 
             <!-- Slide 3 -->
             <div class="mySlides2">
                 <img src="templates/img_Parties/republican/3.jpeg" class="slide-img">
-                <div class="slide-text">George W. Bush</div>
+                <figcaption class="slide-text">George W. Bush</figcaption>
             </div>
 
             <!-- Slide 4 -->
             <div class="mySlides2">
                 <img src="templates/img_Parties/republican/4.jpg" class="slide-img">
-                <div class="slide-text">Donald Trump</div>
+                <figcaption class="slide-text">Donald Trump</figcaption>
             </div>
 
 
@@ -251,26 +277,35 @@
     <div class="party" id="thirdparty">
         <!-- Testo a sinistra -->
         <div style="width: 60%;">
-        <h2>Third Parties</h2>
-        <h3>Overview</h3>
-        <p>Third parties in the United States refer to political parties other than the dominant Democratic and Republican parties...</p>
+            <h2>Third Parties</h2>
+            <h3>Overview</h3>
+            <p>Third parties in the United States refer to political parties other than the dominant Democratic and Republican parties. These parties offer alternative ideologies and policies to voters.</p>
 
-        <h3>Examples</h3>
-        <ul>
-            <li>Notable third parties include the Libertarian Party, Green Party, Constitution Party, and various independent candidates.</li>
-            <li>Third parties often emerge around specific ideologies such as libertarianism, environmentalism, or constitutional conservatism.</li>
-        </ul>
+            <h3>Examples</h3>
+            <ul>
+                <li>Notable third parties include the Libertarian Party, Green Party, Constitution Party, and various independent candidates.</li>
+                <li>Each of these parties represents distinct ideologies, such as libertarianism, environmentalism, or constitutional conservatism.</li>
+            </ul>
 
-        <h3>Challenges</h3>
-        <ul>
-            <li>Third parties face significant obstacles in gaining ballot access, media coverage, and financial support.</li>
-            <li>The winner-takes-all electoral system in the U.S. often marginalizes third-party candidates, leading to a two-party dominance.</li>
-        </ul>
+            <h3>Challenges</h3>
+            <ul>
+                <li>Third parties face significant obstacles in gaining ballot access, media coverage, and financial support. The two-party system dominates American politics, making it difficult for third parties to compete.</li>
+                <li>Additionally, the winner-takes-all electoral system in the U.S. often marginalizes third-party candidates, further limiting their influence.</li>
+            </ul>
 
-        <h3>Impact</h3>
-        <p>Despite challenges, third parties have influenced American politics by shaping debates, promoting new ideas, and occasionally winning local or state-level offices.</p>
+            <h3>Impact</h3>
+            <p>Despite these challenges, third parties have influenced American politics by shaping debates, promoting new ideas, and occasionally winning local or state-level offices. They often bring attention to issues overlooked by the major parties and offer voters alternative choices.</p>
+        </div>
+
+        <div>
+            <ul class="logo-list">
+                <li><a href="https://www.lp.org/"><img src="templates/img_Parties/thirdParties/1.png" alt="Libertarian Party Logo"></a></li>
+                <li><a href="https://www.gp.org/"><img src="templates/img_Parties/thirdParties/2.jpeg" alt="Green Party Logo"></a></li>
+                <li><a href="https://www.constitutionparty.com/"><img src="templates/img_Parties/thirdParties/3.png" alt="Constitution Party Logo"></a></li>
+            </ul>
+        </div>
     </div>
-    </div>
+
 
     <div class="button-container">
         <div class="button hover" >
@@ -309,6 +344,8 @@
             slides[slide2Index-1].style.display = "block";
         setTimeout(showSlides2, 6000); // Cambia slide ogni 6 secondi (6000 millisecondi)
     }
+
+
 </script>
 </body>
 </html>
