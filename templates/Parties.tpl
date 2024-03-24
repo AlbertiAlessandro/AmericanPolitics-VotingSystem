@@ -22,14 +22,24 @@
             max-width: 1200px; /* Limitato la larghezza del contenitore principale */
             padding: 0 20px; /* Aggiunto spazio ai lati */
         }
+
+        .introsection {
+            text-align: center;
+            color: #fff; /* colore testo bianco */
+            padding: 0 20px;
+            width: 100%; /* Larghezza al 100% */
+            top: 0; /* Allinea all'inizio dello schermo */
+            left: 0; /* Allinea all'inizio dello schermo */
+        }
+
         h1 {
             font-size: 4em;
-            color: #007bff;
+            color: black;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
         .party {
             width: 100%; /* Utilizza tutta la larghezza del contenitore */
-            background-color: #f9f9f9;
+            background-color: floralwhite;
             padding: 15px;
             border-radius: 5px;
             margin-top: 15px;
@@ -138,11 +148,22 @@
             height: auto;
         }
 
+        .usa-flag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px; /* Adjust the size as needed */
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>THE PARTIES</h1>
+    <div class="introsection">
+        <img class="usa-flag" src="templates/img_PresidentPage/usaBandiera.png" alt="USA Flag">
+        <h1>THE PARTIES</h1>
+    </div>
 
     <!-- Democratic Party section -->
     <div class="party" id="democraticparty">
@@ -300,7 +321,7 @@
         <div>
             <ul class="logo-list">
                 <li><a href="https://www.lp.org/"><img src="templates/img_Parties/thirdParties/1.png" alt="Libertarian Party Logo"></a></li>
-                <li><a href="https://www.gp.org/"><img src="templates/img_Parties/thirdParties/2.jpeg" alt="Green Party Logo"></a></li>
+                <li><a href="https://www.gp.org/"><img src="templates/img_Parties/thirdParties/2.png" alt="Green Party Logo"></a></li>
                 <li><a href="https://www.constitutionparty.com/"><img src="templates/img_Parties/thirdParties/3.png" alt="Constitution Party Logo"></a></li>
             </ul>
         </div>
