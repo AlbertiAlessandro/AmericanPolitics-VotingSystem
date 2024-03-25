@@ -8,6 +8,6 @@ $template = new \League\Plates\Engine('templates', 'tpl');
 
 
 
-echo $template->render('ActualPresident', [
+echo $template->render('CurrentPresident', [
 
 ]);

@@ -104,6 +104,9 @@
         <h1>Current US President</h1>
         <h2>Joe Biden</h2>
         <p><span class="highlight">Joe Biden</span> is the 46th President of the United States, serving since January 20, 2021. He was born on November 20, 1942, in Scranton, Pennsylvania. President Biden has a long political career, including serving as the Vice President under Barack Obama from 2009 to 2017.</p>
+        <p>Biden won the election by securing <span class="highlight">306</span> electoral votes compared to Trump's 232. He also received over 81 million votes, the highest number ever cast for a presidential candidate in U.S. history.</p>
+        <p>Biden's victory was achieved through successful campaigns in key swing states, particularly in the Midwest and Rust Belt regions, such as Pennsylvania, Michigan, and Wisconsin.</p>
+        <p>As President, Joe Biden has prioritized addressing pressing issues such as the <span class="highlight">COVID-19 pandemic</span>, economic recovery, climate change, racial justice, and healthcare reform.</p>
         <p>Learn more about President Biden's policies and initiatives on the official <a href="https://www.whitehouse.gov/" target="_blank">White House website</a>.</p>
         <div class="button-container">
             <div class="button hover" >
