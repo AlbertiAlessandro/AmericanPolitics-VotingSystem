@@ -1,42 +1,54 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>American Elections Database</title>
-
+    <title>Database</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 20px auto;
-        }
-        .filters {
-            margin-bottom: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        table th {
-            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        .usa-flag {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 50px; /* Adjust the size as needed */
-            height: auto;
+        .header {
+            background-color: floralwhite;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .filter-container {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-container input {
+            width: 200px;
+            padding: 8px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
         }
 
         /* Modifica lo stile dei bottoni */
@@ -60,100 +72,123 @@
             color: #fff; /* Bianco */
         }
 
-        /* Posiziona i bottoni sopra e sotto l'h1 */
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            width: 80%; /* Larghezza massima del contenitore dei bottoni */
-            margin: 0 auto; /* Centra il contenitore dei bottoni */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
         }
 
-        /* Stili per il div della query */
-        .query {
-            background-color: #f9f9f9; /* Colore di sfondo diverso */
-            padding: 20px;
-            margin-bottom: 20px; /* Aggiunge spazio sotto il div */
+        th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
         }
 
-        .keyword {
-            font-weight: bold;
-            margin-right: 5px;
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .reset-button {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .usa-flag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px; /* Adjust the size as needed */
+            height: auto;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>American Elections Database</h1>
+<div class="header">
+    <h1>Presidential Elections Database</h1>
     <img class="usa-flag" src="templates/img_PresidentPage/usaBandiera.png" alt="USA Flag">
-    <!-- Div per la query SQL -->
-    <div class="query">
-        <h2>Select the fields for your SQL query</h2>
-        <h4>Winner of elections in a specific year</h4>
-        <div class="query-content">
-            <span class="keyword">YEAR</span>
-            <select name="selectOptions" id="selectOptions">
-                <?php for ($i = 1976; $i <= 2020; $i += 4): ?>
-                <option value="<?= $year ?>"><?=$i?></option>
-                <?php endfor; ?>
-            </select>
+</div>
 
-
-
-        </div>
-        <div class="button-container">
-            <button onclick="componiQuery()">Componi Query</button>
-        </div>
+<div class="container">
+    <div class="filter-container">
+        <input type="number" id="Anno" placeholder="Year only divisible by 4" value='' min='1976' max='2020' step='4'>
+        <input type="text" id="Candidato" placeholder="Candidates" value=''>
+        <input type="text" id="Stato" placeholder="State" value=''>
+        <button class="reset-button" onclick="resetFilters()">Reset</button>
     </div>
 
-    <table id="data-table">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Categoria</th>
-            <th>Stato</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Questo è solo un esempio di tabella vuota -->
-        <tr>
-            <td colspan="4">Nessun dato disponibile</td>
-        </tr>
-        </tbody>
-    </table>
-
     <div class="button-container">
-        <div class="button hover" >
+        <div class="button hover">
             <a href='index.php'><button>Home</button></a>
         </div>
     </div>
+    <table id="myTable">
+        <thead>
+        <tr>
+            <th>Year</th>
+            <th>Candidate</th>
+            <th>State</th>
+            <th>Votes</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
 </div>
 
 <script>
-    function componiQuery() {
-        var selectOption = document.getElementById("selectOptions").value;
-        var fromOption = document.getElementById("fromOptions").value;
-        var categoria = document.getElementById("category").value;
-        var stato = document.getElementById("status").value;
+    const filter1Input = document.getElementById('Candidato');
+    const filter2Input = document.getElementById('Stato');
+    const filter3Input = document.getElementById('Anno');
 
-        var query = "SELECT " + selectOption + " FROM " + fromOption;
+    document.addEventListener("DOMContentLoaded", function() {
+        filter1Input.addEventListener('keyup', function() {
+            filterTable();
+        });
 
-        if (categoria !== "") {
-            query += " WHERE categoria = '" + categoria + "'";
+        filter2Input.addEventListener('keyup', function() {
+            filterTable();
+        });
+
+        filter3Input.addEventListener('input', function() {
+            filterTable();
+        });
+    });
+
+    function filterTable() {
+        const filter1Value = filter1Input.value.toUpperCase();
+        const filter2Value = filter2Input.value.toUpperCase();
+        const filter3Value = filter3Input.value;
+
+        if (filter3Value % 4 != 0 && filter3Value != '') {
+            alert("Error, wrong input year")
+            filter3Input.value = '';
+        } else {
+            const tableBody = document.getElementById('tableBody');
+
+            fetch('Database.php? Candidato=' + filter1Value + '&Stato=' + filter2Value + '&Anno=' + filter3Value)
+                .then(response => response.text())
+                .then(data => {
+                    tableBody.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Errore durante il recupero dei dati:', error);
+                });
         }
+    }
 
-        if (stato !== "") {
-            if (categoria === "") {
-                query += " WHERE stato = '" + stato + "'";
-            } else {
-                query += " AND stato = '" + stato + "'";
-            }
-        }
-
-        console.log("Query:", query);
-    // Esegui qui la logica per eseguire la query
+    function resetFilters() {
+        document.getElementById('Stato').value = '';
+        document.getElementById('Candidato').value = '';
+        document.getElementById('Anno').value = '';
+        filterTable();
     }
 </script>
 
