@@ -2,7 +2,7 @@ var simplemaps_usmap_mapdata={
   main_settings: {
     //General settings
     width: "responsive", //'700' or 'responsive'
-    background_color: "lightblue",
+    background_color: "white",
     background_transparent: "no",
 
     //Label defaults

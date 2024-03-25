@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>USA Map Example</title>
-    <script src="mapdata.js"></script>
-    <script src="usmap.js"></script>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>USA Map Example</title>
+  <script src="mapdata.js"></script>
+  <script src="usmap.js"></script>
 
-    <style>
+  <style>
+    /* Stile per l'h1 */
+    h1 {
+      font-size: 3em;
+      color: #333; /* Colore del testo leggermente più scuro */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      text-align: center; /* Centra il testo */
+      margin-top: 30px; /* Aggiunge spazio sopra */
+    }
+
+    /* Contenitore della mappa */
+    #map-container {
+      display: flex;
+      justify-content: center; /* Centra la mappa */
+      margin-top: 20px; /* Aggiunge spazio sopra */
+    }
+
+    /* Stile per la mappa */
+    #map {
+      width: 75%; /* Larghezza della mappa */
+      padding: 20px; /* Aggiunge spazio interno */
+    }
+
     /* Modifica lo stile dei bottoni */
     .button button {
-    padding: 15px 30px;
-    border: 2px solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: #fff; /* Bianco */
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    margin: 5px; /* Spaziatura tra i bottoni */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+      padding: 15px 30px;
+      border: 2px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #fff; /* Bianco */
+      color: black;
+      font-size: 1em;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      margin: 5px; /* Spaziatura tra i bottoni */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombra leggera */
     }
 
     /* Effetto hover per i bottoni */
     .button button:hover {
-    background-color: lightcoral; /* Verde lime */
-    color: #fff; /* Bianco */
+      background-color: lightcoral; /* Verde lime */
+      color: #fff; /* Bianco */
     }
 
     /* Posiziona i bottoni sopra e sotto l'h1 */
     .button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%; /* Larghezza massima del contenitore dei bottoni */
-    margin: 0 auto; /* Centra il contenitore dei bottoni */
+      display: flex;
+      justify-content: center; /* Centra i bottoni */
+      margin-top: 20px; /* Aggiunge spazio sopra */
     }
+  </style>
+</head>
+<body>
+<h1>USA Map</h1>
 
-    </style>
-  </head>
-  <body>
-  <h1>Map</h1>
-    <div id="map"></div>
+<div id="map-container">
+  <div id="map"></div>
+</div>
 
-  <div class="button-container">
-    <div class="button hover" >
-      <a href='index.php'><button>Back</button></a>
-    </div>
+<div class="button-container">
+  <div class="button hover">
+    <a href='index.php'><button>Back</button></a>
   </div>
+</div>
 
-	</body>
-
+</body>
 </html>
-
-
-      
-    
-
